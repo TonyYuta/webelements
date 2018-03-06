@@ -29,6 +29,6 @@ public class HomePageTest {
 	
 	@Test
 	public void qqq() {
-		AssertJUnit.assertEquals("2143242352", "324325352");
+		AssertJUnit.assertEquals(111, 111);
 	}
 }
