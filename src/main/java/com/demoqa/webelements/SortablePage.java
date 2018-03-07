@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * SortablePage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class SortablePage extends BasePage {
+	
+	public SortablePage(WebDriver driver) {
+		super(driver);
+	}
 }

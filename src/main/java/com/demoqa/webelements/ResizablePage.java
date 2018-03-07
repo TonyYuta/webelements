@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * ResizablePage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class ResizablePage extends BasePage {
+	
+	public ResizablePage(WebDriver driver) {
+		super(driver);
+	}
 }

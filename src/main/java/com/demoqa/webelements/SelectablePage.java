@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * SelectablePage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class SelectablePage extends BasePage {
+	
+	public SelectablePage(WebDriver driver) {
+		super(driver);
+	}
 }

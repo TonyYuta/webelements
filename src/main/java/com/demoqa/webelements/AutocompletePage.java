@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * AutocompletePage //ADDD (description of class)
@@ -22,5 +23,9 @@ package com.demoqa.webelements;
  *
  */
 public class AutocompletePage extends BasePage {
+	
+	public AutocompletePage(WebDriver driver) {
+		super(driver);
+	}
 	
 }

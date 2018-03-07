@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * MenuPage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class MenuPage extends BasePage {
+	
+	public MenuPage(WebDriver driver) {
+		super(driver);
+	}
 }

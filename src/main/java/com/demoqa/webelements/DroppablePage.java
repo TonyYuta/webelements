@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * DroppablePage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class DroppablePage extends BasePage {
+	
+	public DroppablePage(WebDriver driver) {
+		super(driver);
+	}
 }

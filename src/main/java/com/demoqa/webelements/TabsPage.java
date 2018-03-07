@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * TabsPage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class TabsPage extends BasePage {
+	
+	public TabsPage(WebDriver driver) {
+		super(driver);
+	}
 }

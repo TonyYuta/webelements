@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * TooltipPage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class TooltipPage extends BasePage {
+	
+	public TooltipPage(WebDriver driver) {
+		super(driver);
+	}
 }

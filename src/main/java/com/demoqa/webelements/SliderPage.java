@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * SliderPage //ADDD (description of class)
@@ -22,6 +23,10 @@ package com.demoqa.webelements;
  *
  */
 public class SliderPage extends BasePage {
+	
+	public SliderPage(WebDriver driver) {
+		super(driver);
+	}
 	
 	
 }

@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * DatepickerPage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class DatepickerPage extends BasePage {
+	
+	public DatepickerPage(WebDriver driver) {
+		super(driver);
+	}
 }

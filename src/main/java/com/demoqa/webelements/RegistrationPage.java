@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
  * RegistrationPage //ADDD (description of class)
@@ -22,4 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class RegistrationPage extends BasePage {
+	
+	public RegistrationPage(WebDriver driver) {
+		super(driver);
+	}
 }

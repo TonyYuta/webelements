@@ -1,5 +1,5 @@
 /**
- *   File Name: FramesAndWindows.java<br>
+ *   File Name: FramesAndWindowsPage.java<br>
  *
  *   Yutaka<br>
  *   Created: Mar 5, 2018
@@ -8,9 +8,10 @@
 
 package com.demoqa.webelements;
 
+import org.openqa.selenium.WebDriver;
 
 /**
- * FramesAndWindows //ADDD (description of class)
+ * FramesAndWindowsPage //ADDD (description of class)
  * <p>
  * //ADDD (description of core fields)
  * <p>
@@ -21,5 +22,9 @@ package com.demoqa.webelements;
  * @since       1.0
  *
  */
-public class FramesAndWindows extends BasePage {
+public class FramesAndWindowsPage extends BasePage {
+	
+	public FramesAndWindowsPage(WebDriver driver) {
+		super(driver);
+	}
 }
