@@ -1,5 +1,5 @@
 /**
- *   File Name: HomePage.java<br>
+ *   File Name: BasePage.java<br>
  *
  *   Yutaka<br>
  *   Created: Mar 5, 2018
@@ -10,9 +10,10 @@ package com.demoqa.webelements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 /**
- * HomePage //ADDD (description of class)
+ * BasePage //ADDD (description of class)
  * <p>
  * //ADDD (description of core fields)
  * <p>
@@ -23,13 +24,10 @@ import org.openqa.selenium.WebDriver;
  * @since       1.0
  *
  */
-public class HomePage extends BasePage {
+public class BasePage {
 	
-	public HomePage(WebDriver driver) {
-		super(driver);
-	}
-	
-	private static String homePageUrl = "http://demoqa.com/";
+	protected WebElement we;
+	protected WebDriver driver;
 	
 	private By registrationBtn 		= By.cssSelector("#menu-item-374 > a");
 	private By draggableBtn 			= By.cssSelector("#menu-item-140 > a");
@@ -45,16 +43,17 @@ public class HomePage extends BasePage {
 	private By tabsBtn 				= By.cssSelector("#menu-item-98");
 	private By tooltipBtn 			= By.cssSelector("#menu-item-99");
 	private By framesAndWindowsBtn 	= By.cssSelector("#menu-item-148");
+
 	
-	public HomePage navigateToHomePage() {
-		driver.navigate().to(homePageUrl);
-		return new HomePage(driver);
+	public BasePage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public String currentPageString() {
+		return driver.getTitle();
 	}
 	
 	public void navigateToRegistrationPage() {
-		we = driver.findElement(registrationBtn);
-		return new RegistrationPage(driver);
+		
 	}
-	
-	
 }
