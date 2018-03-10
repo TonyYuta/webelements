@@ -121,7 +121,7 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage", "FramesAndWindowsPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToFramesAndWindowsPage() {
-		String expected = "Frames and Windows | Demoqa";
+		String expected = "Frames and windows | Demoqa";
 		homePage.navigateToFramesAndWindowsPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}

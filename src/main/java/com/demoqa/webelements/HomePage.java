@@ -37,7 +37,7 @@ public class HomePage extends BasePage {
 	private By resizableBtn 			= By.cssSelector("#menu-item-143 > a");
 	private By selectableBtn 		= By.cssSelector("#menu-item-142 > a");
 	private By sortableBtn 			= By.cssSelector("#menu-item-151 > a");
-	private By accordionBtn 			= By.cssSelector("#menu-item-141 > a");
+	private By accordionBtn 			= By.cssSelector("#menu-item-144 > a");
 	private By autocompleteBtn 		= By.cssSelector("#menu-item-145 > a");
 	private By datepickerBtn 		= By.cssSelector("#menu-item-146 > a");
 	private By menuBtn 				= By.cssSelector("#menu-item-147");
