@@ -14,7 +14,6 @@ import java.util.HashSet;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 
 /**
  * BaseTest //ADDD (description of class)
@@ -51,44 +50,44 @@ public class BaseTest {
 	ArrayList<String> al;
 	HashSet<String> hs;
 		
-		@Parameters({ "browser", "appURL", "groups" })
-		@BeforeClass(alwaysRun = true)				
-		public void initializeTestBaseSetup(String browser, String appURL, String groups) {
-			try {
-				DriverFactory.setDriver(browser, appURL, groups);
+	//@Parameters({ "browser", "appURL", "groups" })
+	//@Parameters({ "browser", "appURL", "groups" })
+	@BeforeClass(alwaysRun = true)				
+	public void initializeTestBaseSetup(String browser, String appURL, String groups) {
+		try {
+			DriverFactory.setDriver(browser, appURL, groups);
 
-			} catch (Exception e) {
-				System.out.println("Error....." + e.getStackTrace());
-			}
-			
-			driver = DriverFactory.getDriver();
-			
-			homePage = new HomePage(driver);
-			registrationPage = new RegistrationPage(driver);
-			draggablePage = new DraggablePage(driver);
-			droppablePage = new DroppablePage(driver);
-			resizablePage = new ResizablePage(driver);
-			selectablePage = new SelectablePage(driver);
-			sortablePage = new SortablePage(driver);
-			accordionPage = new AccordionPage(driver);
-			autocompletePage = new AutocompletePage(driver);
-			datepickerPage = new DatepickerPage(driver);
-			menuPage = new MenuPage(driver);
-			sliderPage = new SliderPage(driver);
-			tabsPage = new TabsPage(driver);
-			tooltipPage = new TooltipPage(driver);
-			framesAndWindowsPage = new FramesAndWindowsPage(driver);
-
+		} catch (Exception e) {
+			System.out.println("Error....." + e.getStackTrace());
 		}
-		
-		@AfterClass(enabled = true, alwaysRun = true)
-		public void afterClassTearDown() {
-			//driver.close();
-			driver.quit();
-			}	
-		
-
-		
-		
+			
+		driver = DriverFactory.getDriver();
+			
+		homePage = new HomePage(driver);
+		registrationPage = new RegistrationPage(driver);
+		draggablePage = new DraggablePage(driver);
+		droppablePage = new DroppablePage(driver);
+		resizablePage = new ResizablePage(driver);
+		selectablePage = new SelectablePage(driver);
+		sortablePage = new SortablePage(driver);
+		accordionPage = new AccordionPage(driver);
+		autocompletePage = new AutocompletePage(driver);
+		datepickerPage = new DatepickerPage(driver);
+		menuPage = new MenuPage(driver);
+		sliderPage = new SliderPage(driver);
+		tabsPage = new TabsPage(driver);
+		tooltipPage = new TooltipPage(driver);
+		framesAndWindowsPage = new FramesAndWindowsPage(driver);
 
 	}
+		
+	@AfterClass(enabled = true, alwaysRun = true)
+	public void afterClassTearDown() {
+		//driver.close();
+		driver.quit();
+	}	
+		
+		
+		
+
+}
