@@ -27,4 +27,5 @@ public class AccordionPage extends BasePage {
 	public AccordionPage(WebDriver driver) {
 		super(driver);
 	}
+	
 }

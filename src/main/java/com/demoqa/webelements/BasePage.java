@@ -28,14 +28,11 @@ public class BasePage {
 	protected WebElement we;
 	protected WebDriver driver;
 	
-
-
-	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	public String currentPageString() {
+	public String currentPageTitle() {
 		return driver.getTitle();
 	}
 	
