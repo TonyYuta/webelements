@@ -14,6 +14,7 @@ import java.util.HashSet;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 /**
  * BaseTest //ADDD (description of class)
@@ -50,13 +51,8 @@ public class BaseTest {
 	ArrayList<String> al;
 	HashSet<String> hs;
 	
-	public static String browser;
-	public static String appUrl;;
-
-		
-	//@Parameters({ "browser", "appURL", "groups" })
+	@Parameters({ "browser", "appURL", "groups" })
 	@BeforeClass(alwaysRun = true)				
-	//public void initializeTestBaseSetup(String browser, String appURL, String groups) {
 	public void initializeTestBaseSetup(String browser, String appURL, String groups) {
 		try {
 			DriverFactory.setDriver(browser, appURL, groups);
@@ -64,9 +60,8 @@ public class BaseTest {
 		} catch (Exception e) {
 			System.out.println("Error....." + e.getStackTrace());
 		}
-			
 		driver = DriverFactory.getDriver();
-			
+		
 		homePage = new HomePage(driver);
 		registrationPage = new RegistrationPage(driver);
 		draggablePage = new DraggablePage(driver);
@@ -84,14 +79,15 @@ public class BaseTest {
 		framesAndWindowsPage = new FramesAndWindowsPage(driver);
 
 	}
-		
+	
 	@AfterClass(enabled = true, alwaysRun = true)
 	public void afterClassTearDown() {
 		//driver.close();
 		driver.quit();
-	}	
-		
-		
-		
+		}	
+	
+
+	
+	
 
 }
