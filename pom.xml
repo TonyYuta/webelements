@@ -156,7 +156,7 @@
                         </goals>
                         <configuration>
                             <testFailureIgnore>true</testFailureIgnore>
-                            <argLine>${surefireArgLine}</argLine>  
+                             <argLine>${surefireArgLine}</argLine>  
                         </configuration>
                     </execution>
                 </executions>
@@ -237,4 +237,4 @@
         </plugins>
     </reporting>
 </project>
-
+ 
