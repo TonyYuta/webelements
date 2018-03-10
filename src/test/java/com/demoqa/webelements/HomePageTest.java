@@ -23,14 +23,14 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToHomePage() {
-		String expected = "Homepage";
+		String expected = "Demoqa";
 		homePage.navigateToHomePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "RegistrationPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToRegistrationPage() {
-		String expected = "RegistrationPage";
+		String expected = "Registration | Demoqa";
 		homePage.navigateToRegistrationPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
@@ -51,21 +51,21 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage", "ResizablePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToResizablePage() {
-		String expected = "ResizablePage";
+		String expected = "Resizable | Demoqa";
 		homePage.navigateToResizablePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "SelectablePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToSelectablePage() {
-		String expected = "SelectablePage";
+		String expected = "Selectable | Demoqa";
 		homePage.navigateToSelectablePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "SortablePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToSortablePage() {
-		String expected = "SortablePage";
+		String expected = "Sortable | Demoqa";
 		homePage.navigateToSortablePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
@@ -93,35 +93,35 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage", "MenuPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToMenuPage() {
-		String expected = "MenuPage";
+		String expected = "Menu | Demoqa";
 		homePage.navigateToMenuPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "SliderPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToSliderPage() {
-		String expected = "SliderPage";
+		String expected = "Slider | Demoqa";
 		homePage.navigateToSliderPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "TabsPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToTabsPage() {
-		String expected = "TabsPage";
+		String expected = "Tabs | Demoqa";
 		homePage.navigateToTabsPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "TooltipPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToTooltipPage() {
-		String expected = "TooltipPage";
+		String expected = "Tooltip | Demoqa";
 		homePage.navigateToTooltipPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "FramesAndWindowsPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToFramesAndWindowsPage() {
-		String expected = "FramesAndWindowsPage";
+		String expected = "Frames and Windows | Demoqa";
 		homePage.navigateToFramesAndWindowsPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
