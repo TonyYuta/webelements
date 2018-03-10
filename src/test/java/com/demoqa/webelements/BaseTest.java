@@ -49,10 +49,14 @@ public class BaseTest {
 	
 	ArrayList<String> al;
 	HashSet<String> hs;
+	
+	public static String browser;
+	public static String appUrl;;
+
 		
 	//@Parameters({ "browser", "appURL", "groups" })
-	//@Parameters({ "browser", "appURL", "groups" })
 	@BeforeClass(alwaysRun = true)				
+	//public void initializeTestBaseSetup(String browser, String appURL, String groups) {
 	public void initializeTestBaseSetup(String browser, String appURL, String groups) {
 		try {
 			DriverFactory.setDriver(browser, appURL, groups);

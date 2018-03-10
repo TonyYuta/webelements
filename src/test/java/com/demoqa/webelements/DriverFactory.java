@@ -30,12 +30,12 @@ public class DriverFactory {
 	
 	public static WebDriver driver;
 	public static DesiredCapabilities capabilities;
-	public static String driverPath = "/webelements/resources/webdrivers/mac/";
-	
+	public static String driverPath = "/uiapibbc/resources/webdrivers/mac/";
+
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	
+
 	protected static void setDriver(String browser, String appURL, String groups) {
 		switch (browser) {
 		case "chrome":			
@@ -67,10 +67,11 @@ public class DriverFactory {
 			driver = initFirefoxDriver(appURL);
 		}
 	}
-	
+
 	private static WebDriver initChromeDriver(String appURL) {
 		System.out.println("Launching google chrome with new profile..");
-		System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
+		System.setProperty("webdriver.chrome.driver", driverPath
+				+ "chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
@@ -84,7 +85,7 @@ public class DriverFactory {
 		driver.navigate().to(appURL);
 		return driver;
 	}
-	
-	
+
 	
 }
+	
