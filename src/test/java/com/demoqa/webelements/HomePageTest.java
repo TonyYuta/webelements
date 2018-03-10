@@ -23,7 +23,7 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToHomePage() {
-		String expected = "Demoqa";
+		String expected = "Demoqa | Just another WordPress site";
 		homePage.navigateToHomePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
@@ -37,14 +37,14 @@ public class HomePageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"Homepage", "DraggablePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToDraggablePage() {
-		String expected = "DraggablePage";
+		String expected = "Draggable | Demoqa";
 		homePage.navigateToDraggablePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "DroppablePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToDroppablePage() {
-		String expected = "DroppablePage";
+		String expected = "Droppable | Demoqa";
 		homePage.navigateToDroppablePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
@@ -72,21 +72,21 @@ public class HomePageTest extends BaseTest {
 		
 	@Test(enabled = true, groups = {"Homepage", "AccordionPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToAccordionPage() {
-		String expected = "AccordionPage";
+		String expected = "Accordion | Demoqa";
 		homePage.navigateToAccordionPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "AutocompletePage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToAutocompletePage() {
-		String expected = "AutocompletePage";
+		String expected = "Autocomplete | Demoqa";
 		homePage.navigateToAutocompletePage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"Homepage", "DatepickerPage",  "bat", "regression", "all"}, priority = 0)
 	public void testNavigateToDatepickerPage() {
-		String expected = "DatepickerPage";
+		String expected = "Datepicker | Demoqa";
 		homePage.navigateToDatepickerPage();
 		Assert.assertEquals(homePage.currentPageTitle(), expected, "URI doesn't match to Home page");
 	}
