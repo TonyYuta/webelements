@@ -74,9 +74,9 @@ public class RegistrationPage extends BasePage {
 			boolean hobbyReading,
 			boolean hobbyCricket,
 			String country,
-			String dobMonth,
-			String dobDay,
-			String dobYear,
+			int dobMonth,
+			int dobDay,
+			int dobYear,
 			String phone,
 			String username,
 			String email,
@@ -149,18 +149,21 @@ public class RegistrationPage extends BasePage {
 		// choose month
 		we = driver.findElement(dobMonthDropDownList);
 		Select selectMonth = new Select(we);
-		selectMonth.selectByVisibleText(dobMonth);
+		selectMonth.selectByVisibleText(Integer.toString(dobMonth));
+//		selectMonth.selectByVisibleText(dobMonth);
 		
 		// choose day
 		we = driver.findElement(dobDayDropDownList);
 		Select selectDay = new Select(we);
-		selectDay.selectByVisibleText(dobDay);
+		selectDay.selectByVisibleText(Integer.toString(dobDay));
 		
 		// choose year
 		we = driver.findElement(dobYearDropDownList);
 		Select selectYear = new Select(we);
-		selectYear.selectByVisibleText(dobYear);
+		selectYear.selectByVisibleText(Integer.toString(dobYear));
 		
+		
+		Helper.waiting2000();
 		
 		
 		

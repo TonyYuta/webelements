@@ -47,6 +47,7 @@ public class BaseTest {
 	TabsPage tabsPage;
 	TooltipPage tooltipPage;
 	FramesAndWindowsPage framesAndWindowsPage;
+	Helper helper;
 	
 	ArrayList<String> al;
 	HashSet<String> hs;
@@ -77,6 +78,7 @@ public class BaseTest {
 		tabsPage = new TabsPage(driver);
 		tooltipPage = new TooltipPage(driver);
 		framesAndWindowsPage = new FramesAndWindowsPage(driver);
+		helper = new Helper();
 
 	}
 	

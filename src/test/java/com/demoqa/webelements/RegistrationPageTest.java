@@ -26,6 +26,25 @@ public class RegistrationPageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"RegistrationPage",  "bat", "regression", "all"}, priority = 0)
 	public void testRegistrationUser() {
+		String fName = "";
+		String lName = "";
+		String marStatus = "";
+		boolean hobbyDance = true; 
+		boolean hobbyReading = true; 
+		boolean hobbyCricket = false; 
+		String country = "USA";
+		int dobMonth = 1;
+		int dobDay = 1;
+		int dobYear = 2000;
+		String phone = "543-776-1234";
+		String username = "";
+		String email = "";
+		String profilePicture = "";
+		String aboutYourself = ""; 
+		String pwd = "";
+		
+	
 		homePage.navigateToRegistrationPage();
+		registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobMonth, dobDay, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
 	}
 }
