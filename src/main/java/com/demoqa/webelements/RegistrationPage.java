@@ -90,12 +90,16 @@ public class RegistrationPage extends BasePage {
 		we.clear();
 		we.sendKeys(fName);
 		
+		Helper.waiting1000();
+		
 		// fill out last name
 		we = driver.findElement(lNameField);
 		we.click();
 		we.clear();
 		we.sendKeys(lName);
-		
+
+		Helper.waiting1000();
+
 		// choose marital status
 		
 		char[] marStatusArray = marStatus.toLowerCase().toCharArray();
@@ -123,6 +127,8 @@ public class RegistrationPage extends BasePage {
 				}
 			break;
 		}
+		
+		Helper.waiting1000();
 	
 		// choose Hobby check boxes
 		
@@ -130,7 +136,7 @@ public class RegistrationPage extends BasePage {
 			we = driver.findElement(hobbyDanceCheckBox);
 			we.click();
 		}
-		
+				
 		if(hobbyDance) {
 			we = driver.findElement(hobbyReadingCheckBox);
 			we.click();
@@ -141,29 +147,37 @@ public class RegistrationPage extends BasePage {
 			we.click();
 		}
 		
+		Helper.waiting1000();
+
 		// choose country
 		we = driver.findElement(countryDropDownList);
 		Select select = new Select(we);
 		select.selectByVisibleText(country);
 		
+		Helper.waiting1000();
+
 		// choose month
 		we = driver.findElement(dobMonthDropDownList);
 		Select selectMonth = new Select(we);
 		selectMonth.selectByVisibleText(Integer.toString(dobMonth));
 //		selectMonth.selectByVisibleText(dobMonth);
 		
+		Helper.waiting1000();
+
 		// choose day
 		we = driver.findElement(dobDayDropDownList);
 		Select selectDay = new Select(we);
 		selectDay.selectByVisibleText(Integer.toString(dobDay));
 		
+		Helper.waiting1000();
+
 		// choose year
 		we = driver.findElement(dobYearDropDownList);
 		Select selectYear = new Select(we);
 		selectYear.selectByVisibleText(Integer.toString(dobYear));
 		
-		
-		Helper.waiting2000();
+		Helper.waiting1000();
+
 		
 		
 		

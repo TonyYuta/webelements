@@ -26,9 +26,9 @@ public class RegistrationPageTest extends BaseTest {
 	
 	@Test(enabled = true, groups = {"RegistrationPage",  "bat", "regression", "all"}, priority = 0)
 	public void testRegistrationUser() {
-		String fName = "";
-		String lName = "";
-		String marStatus = "";
+		String fName = "Bil";
+		String lName = "Moi";
+		String marStatus = "Single";
 		boolean hobbyDance = true; 
 		boolean hobbyReading = true; 
 		boolean hobbyCricket = false; 
@@ -37,11 +37,11 @@ public class RegistrationPageTest extends BaseTest {
 		int dobDay = 1;
 		int dobYear = 2000;
 		String phone = "543-776-1234";
-		String username = "";
-		String email = "";
+		String username = "Me";
+		String email = "meme@gmail.com";
 		String profilePicture = "";
-		String aboutYourself = ""; 
-		String pwd = "";
+		String aboutYourself = "Me means Me"; 
+		String pwd = "pwdmeme";
 		
 	
 		homePage.navigateToRegistrationPage();
