@@ -30,8 +30,8 @@ public class RegistrationPageTest extends BaseTest {
 		String lName = "Moi";
 		String marStatus = "Single";
 		boolean hobbyDance = true; 
-		boolean hobbyReading = true; 
-		boolean hobbyCricket = false; 
+		boolean hobbyReading = false; 
+		boolean hobbyCricket = true; 
 		String country = "USA";
 		int dobMonth = 1;
 		int dobDay = 1;
