@@ -10,7 +10,6 @@ package com.demoqa.webelements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
 /**
  * RegistrationPage //ADDD (description of class)
@@ -36,22 +35,9 @@ public class RegistrationPage extends BasePage {
 	private By hobbyReadingCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(4)");
 	private By hobbyCricketCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(6)");
 
-	int countryDropDownNumber = 1;
-	String countryDropDownListString = "#dropdown_7 > option:nth-child(" + countryDropDownNumber + ")";
-	private By countryDropDownList = By.cssSelector(countryDropDownListString);
 
-	// DOB
-	int dobDayDropDownNumber = 1;
-	String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + dobDayDropDownNumber + ")";
-	private By dobDayDropDownList = By.id(dobDayDropDownListString);
 	
-	int dobMonthDropDownNumber = 1;
-	String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + dobMonthDropDownNumber + ")";
-	private By dobMonthDropDownList = By.id(dobMonthDropDownListString);
 	
-	int dobYearDropDownNumber = 1;
-	String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + dobYearDropDownNumber + ")";
-	private By dobYearDropDownList = By.id("dobYearDropDownListString");
 	
 	private By phoneField =  By.id("phone_9");
 	private By usernameField = By.id("useername");
@@ -74,8 +60,8 @@ public class RegistrationPage extends BasePage {
 			boolean hobbyReading,
 			boolean hobbyCricket,
 			String country,
-			int dobMonth,
 			int dobDay,
+			int dobMonth,
 			int dobYear,
 			String phone,
 			String username,
@@ -90,7 +76,7 @@ public class RegistrationPage extends BasePage {
 		we.clear();
 		we.sendKeys(fName);
 		
-		Helper.waiting1000();
+	//	Helper.waiting1000();
 		
 		// fill out last name
 		we = driver.findElement(lNameField);
@@ -98,7 +84,7 @@ public class RegistrationPage extends BasePage {
 		we.clear();
 		we.sendKeys(lName);
 
-		Helper.waiting1000();
+	//	Helper.waiting1000();
 
 		// choose marital status
 		
@@ -128,7 +114,7 @@ public class RegistrationPage extends BasePage {
 			break;
 		}
 		
-		Helper.waiting1000();
+//		Helper.waiting1000();
 	
 		// choose Hobby check boxes
 		
@@ -147,36 +133,39 @@ public class RegistrationPage extends BasePage {
 			we.click();
 		}
 		
-		Helper.waiting1000();
+		Helper.waiting(1000);
 
 		// choose country
+		int countryDropDownNumber = Helper.countryNameToDropDownNumber(country);;
+		String countryDropDownListString = "#dropdown_7 > option:nth-child(" + countryDropDownNumber + ")";
+		By countryDropDownList = By.cssSelector(countryDropDownListString);		
 		we = driver.findElement(countryDropDownList);
-		Select select = new Select(we);
-		select.selectByVisibleText(country);
-		
-		Helper.waiting1000();
+		we.click();
+				
+		Helper.waiting(1000);
 
-		// choose month
-		we = driver.findElement(dobMonthDropDownList);
-		Select selectMonth = new Select(we);
-		selectMonth.selectByVisibleText(Integer.toString(dobMonth));
-//		selectMonth.selectByVisibleText(dobMonth);
-		
-		Helper.waiting1000();
-
-		// choose day
+		// choose day DOB
+		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + dobDay + ")";
+		By dobDayDropDownList = By.id(dobDayDropDownListString);
 		we = driver.findElement(dobDayDropDownList);
-		Select selectDay = new Select(we);
-		selectDay.selectByVisibleText(Integer.toString(dobDay));
+		we.click();
+		Helper.waiting(1000);
 		
-		Helper.waiting1000();
+		// choose month DOB
+		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + dobMonth + ")";
+		By dobMonthDropDownList = By.id(dobMonthDropDownListString);
+		we = driver.findElement(dobMonthDropDownList);
+		we.click();
+		Helper.waiting(1000);
 
 		// choose year
+		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + dobYear + ")";
+		By dobYearDropDownList = By.id(dobYearDropDownListString);
 		we = driver.findElement(dobYearDropDownList);
-		Select selectYear = new Select(we);
-		selectYear.selectByVisibleText(Integer.toString(dobYear));
+		we.click();		
 		
-		Helper.waiting1000();
+		
+		Helper.waiting(3000);
 
 		
 		
