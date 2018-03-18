@@ -132,17 +132,17 @@ public class RegistrationPage extends BasePage {
 	
 		// choose Hobby check boxes
 		
-		if(hobbyDance == true) {
+		if(hobbyDance) {
 			we = driver.findElement(hobbyDanceCheckBox);
 			we.click();
 		}
 				
-		if(hobbyDance == true) {
+		if(hobbyReading) {
 			we = driver.findElement(hobbyReadingCheckBox);
 			we.click();
 		}
 		
-		if(hobbyDance == true) {
+		if(hobbyCricket) {
 			we = driver.findElement(hobbyCricketCheckBox);
 			we.click();
 		}

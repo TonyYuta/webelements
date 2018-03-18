@@ -28,9 +28,9 @@ public class RegistrationPageTest extends BaseTest {
 	public void testRegistrationUser() {
 		String fName = "Bil";
 		String lName = "Moi";
-		String marStatus = "Single";
+		String marStatus = "Divorced";
 		boolean hobbyDance = true; 
-		boolean hobbyReading = false; 
+		boolean hobbyReading = true; 
 		boolean hobbyCricket = true; 
 		String country = "USA";
 		int dobMonth = 1;
