@@ -149,14 +149,14 @@ public class RegistrationPage extends BasePage {
 		By dobDayDropDownList = By.id(dobDayDropDownListString);
 		we = driver.findElement(dobDayDropDownList);
 		we.click();
-		Helper.waiting(1000);
+		Helper.waiting(2000);
 		
 		// choose month DOB
 		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + dobMonth + ")";
 		By dobMonthDropDownList = By.id(dobMonthDropDownListString);
 		we = driver.findElement(dobMonthDropDownList);
 		we.click();
-		Helper.waiting(1000);
+		Helper.waiting(2000);
 
 		// choose year
 		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + dobYear + ")";
