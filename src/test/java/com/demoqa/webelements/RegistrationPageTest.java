@@ -33,11 +33,9 @@ public class RegistrationPageTest extends BaseTest {
 		boolean hobbyDance = false; 
 		boolean hobbyReading = true; 
 		boolean hobbyCricket = false; 
-		//String country = "United States";
-		//String country = "Belarus";
 		String country = "Russia";
-		int dobMonth = 1;
 		int dobDay = 1;
+		int dobMonth = 1;
 		int dobYear = 2000;
 		String phone = "543-776-1234";
 		String username = "Me";
@@ -47,6 +45,6 @@ public class RegistrationPageTest extends BaseTest {
 		String pwd = "pwdmeme";	
 	
 		homePage.navigateToRegistrationPage();
-		registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobMonth, dobDay, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
+		registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobDay, dobMonth, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
 	}
 }

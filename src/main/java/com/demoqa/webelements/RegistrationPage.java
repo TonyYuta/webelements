@@ -145,21 +145,22 @@ public class RegistrationPage extends BasePage {
 		Helper.waiting(1000);
 
 		// choose day DOB
-		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + dobDay + ")";
+//		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + (dobDay + 1) + ")";
+		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + 5 + ")";
 		By dobDayDropDownList = By.id(dobDayDropDownListString);
 		we = driver.findElement(dobDayDropDownList);
 		we.click();
 		Helper.waiting(2000);
 		
 		// choose month DOB
-		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + dobMonth + ")";
+		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + (dobMonth + 1) + ")";
 		By dobMonthDropDownList = By.id(dobMonthDropDownListString);
 		we = driver.findElement(dobMonthDropDownList);
 		we.click();
 		Helper.waiting(2000);
 
-		// choose year
-		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + dobYear + ")";
+		// choose year DOB
+		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + (dobYear + 1) + ")";
 		By dobYearDropDownList = By.id(dobYearDropDownListString);
 		we = driver.findElement(dobYearDropDownList);
 		we.click();		
