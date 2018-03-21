@@ -60,8 +60,8 @@ public class RegistrationPage extends BasePage {
 			boolean hobbyReading,
 			boolean hobbyCricket,
 			String country,
-			int dobDay,
 			int dobMonth,
+			int dobDay,
 			int dobYear,
 			String phone,
 			String username,
@@ -143,13 +143,6 @@ public class RegistrationPage extends BasePage {
 		we.click();
 				
 		Helper.waiting(1000);
-
-		// choose day DOB
-		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + (dobDay + 1) + ")";
-		By dobDayDropDownList = By.cssSelector(dobDayDropDownListString);
-		we = driver.findElement(dobDayDropDownList);
-		we.click();
-		Helper.waiting(2000);
 		
 		// choose month DOB
 		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + (dobMonth + 1) + ")";
@@ -158,8 +151,16 @@ public class RegistrationPage extends BasePage {
 		we.click();
 		Helper.waiting(2000);
 
+		// choose day DOB
+		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + (dobDay + 1) + ")";
+		By dobDayDropDownList = By.cssSelector(dobDayDropDownListString);
+		we = driver.findElement(dobDayDropDownList);
+		we.click();
+		Helper.waiting(2000);
+		
 		// choose year DOB
-		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + (dobYear + 1) + ")";
+		int yearNumberDropDown = Helper.yearToDropDownNumber(dobYear);
+		String dobYearDropDownListString = "#yy_date_8 > option:nth-child(" + (yearNumberDropDown) + ")";
 		By dobYearDropDownList = By.cssSelector(dobYearDropDownListString);
 		we = driver.findElement(dobYearDropDownList);
 		we.click();		

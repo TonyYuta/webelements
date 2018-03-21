@@ -444,5 +444,215 @@ public class Helper {
 		return countryNumber;
 	}
 	
+	public static int yearToDropDownNumber(int year) {
+		/*		
+		2014: 2
+		2013: 3
+		..
+		
+		1950:
+		*/	
+		int yearNumber = 2;
+		switch(year) {
+			case 2014 : yearNumber = 2;
+			break;
+			
+			case 2013 : yearNumber = 3;
+			break;
+			
+			case 2012 : yearNumber = 4;
+			break;
+			
+			case 2011 : yearNumber = 5;
+			break;
+			
+			case 2010 : yearNumber = 6;
+			break;
+			
+			case 2009 : yearNumber = 7;
+			break;
+			
+			case 2008 : yearNumber = 8;
+			break;
+			
+			case 2007 : yearNumber = 9;
+			break;
+			
+			case 2006 : yearNumber = 10;
+			break;
+			
+			case 2005 : yearNumber = 11;
+			break;
+			
+			case 2004 : yearNumber = 12;
+			break;
+			
+			case 2003 : yearNumber = 13;
+			break;
+			
+			case 2002 : yearNumber = 14;
+			break;
+			
+			case 2001 : yearNumber = 15;
+			break;
+			
+			case 2000 : yearNumber = 16;
+			break;
+			
+			case 1999 : yearNumber = 17;
+			break;
+			
+			case 1998 : yearNumber = 18;
+			break;
+			
+			case 1997 : yearNumber = 19;
+			break;
+			
+			case 1996 : yearNumber = 20;
+			break;
+			
+			case 1995 : yearNumber = 21;
+			break;
+			
+			case 1994 : yearNumber = 22;
+			break;
+			
+			case 1993 : yearNumber = 23;
+			break;
+			
+			case 1992 : yearNumber = 24;
+			break;
+			
+			case 1991 : yearNumber = 25;
+			break;
+			
+			case 1990 : yearNumber = 26;
+			break;
+			
+			case 1989 : yearNumber = 27;
+			break;
+			
+			case 1988 : yearNumber = 28;
+			break;
+			
+			case 1987 : yearNumber = 29;
+			break;
+			
+			case 1986 : yearNumber = 30;
+			break;
+			
+			case 1985 : yearNumber = 31;
+			break;
+			
+			case 1984 : yearNumber = 32;
+			break;
+			
+			case 1983 : yearNumber = 33;
+			break;		
+			
+			case 1982 : yearNumber = 34;
+			break;
+			
+			case 1981 : yearNumber = 35;
+			break;
+			
+			case 1980 : yearNumber = 36;
+			break;
+			
+			case 1979 : yearNumber = 37;
+			break;
+			
+			case 1978 : yearNumber = 38;
+			break;
+			
+			case 1977 : yearNumber = 39;
+			break;
+			
+			case 1976 : yearNumber = 40;
+			break;
+			
+			case 1975 : yearNumber = 41;
+			break;
+			
+			case 1974 : yearNumber = 42;
+			break;
+			
+			case 1973 : yearNumber = 43;
+			break;
+			
+			case 1972 : yearNumber = 44;
+			break;
+			
+			case 1971 : yearNumber = 45;
+			break;
+			
+			case 1970 : yearNumber = 46;
+			break;
+			
+			case 1969 : yearNumber = 47;
+			break;
+			
+			case 1968 : yearNumber = 48;
+			break;
+			
+			case 1967 : yearNumber = 49;
+			break;
+			
+			case 1966 : yearNumber = 50;
+			break;
+			
+			case 1965 : yearNumber = 51;
+			break;
+			
+			case 1964 : yearNumber = 52;
+			break;
+			
+			case 1963 : yearNumber = 53;
+			break;
+			
+			case 1962 : yearNumber = 54;
+			break;
+			
+			case 1961 : yearNumber = 55;
+			break;
+			
+			case 1960 : yearNumber = 56;
+			break;
+			
+			case 1959 : yearNumber = 57;
+			break;
+			
+			case 1958 : yearNumber = 58;
+			break;
+			
+			case  1957: yearNumber = 59;
+			break;
+			
+			case 1956 : yearNumber = 60;
+			break;
+			
+			case 1955 : yearNumber = 61;
+			break;
+			
+			case 1954 : yearNumber = 62;
+			break;
+			
+			case 1953 : yearNumber = 63;
+			break;
+			
+			case 1952 : yearNumber = 64;
+			break;
+			
+			case 1951 : yearNumber = 65;
+			break;
+			
+			case 1950 : yearNumber = 66;
+			break;
+
+		}
+
+		return yearNumber;
+	}
+	
 	
 }
