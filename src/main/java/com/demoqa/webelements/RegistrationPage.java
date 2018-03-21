@@ -64,7 +64,7 @@ public class RegistrationPage extends BasePage {
 			int dobDay,
 			int dobYear,
 			String phone,
-			String username,
+			String userName,
 			String email,
 			String profilePicture,
 			String aboutYourself,
@@ -133,7 +133,7 @@ public class RegistrationPage extends BasePage {
 			we.click();
 		}
 		
-		Helper.waiting(1000);
+	//	Helper.waiting(1000);
 
 		// choose country
 		int countryDropDownNumber = Helper.countryNameToDropDownNumber(country);;
@@ -142,21 +142,21 @@ public class RegistrationPage extends BasePage {
 		we = driver.findElement(countryDropDownList);
 		we.click();
 				
-		Helper.waiting(1000);
+	//	Helper.waiting(1000);
 		
 		// choose month DOB
 		String dobMonthDropDownListString = "#mm_date_8 > option:nth-child(" + (dobMonth + 1) + ")";
 		By dobMonthDropDownList = By.cssSelector(dobMonthDropDownListString);
 		we = driver.findElement(dobMonthDropDownList);
 		we.click();
-		Helper.waiting(2000);
+	//	Helper.waiting(2000);
 
 		// choose day DOB
 		String dobDayDropDownListString = "#dd_date_8 > option:nth-child(" + (dobDay + 1) + ")";
 		By dobDayDropDownList = By.cssSelector(dobDayDropDownListString);
 		we = driver.findElement(dobDayDropDownList);
 		we.click();
-		Helper.waiting(2000);
+	//	Helper.waiting(2000);
 		
 		// choose year DOB
 		int yearNumberDropDown = Helper.yearToDropDownNumber(dobYear);
@@ -164,6 +164,25 @@ public class RegistrationPage extends BasePage {
 		By dobYearDropDownList = By.cssSelector(dobYearDropDownListString);
 		we = driver.findElement(dobYearDropDownList);
 		we.click();		
+		
+		// provide phone number
+		we = driver.findElement(phoneField);
+		we.sendKeys(phone);
+		
+		// provide User Name
+		we = driver.findElement(usernameField);
+		we.sendKeys(userName);
+		
+		// provide email
+		we = driver.findElement(emailField);
+		we.sendKeys(email);
+		
+		// provide link for avatar
+		we = driver.findElement(profilePictureBtn);
+		we.click();
+		
+		
+		
 		
 		
 		Helper.waiting(3000);
