@@ -8,6 +8,7 @@
 
 package com.demoqa.webelements;
 
+import java.util.Random;
 
 /**
  * Helper //ADDD (description of class)
@@ -22,6 +23,8 @@ package com.demoqa.webelements;
  *
  */
 public class Helper {
+	
+	static Random rand;
 	
 	static void waiting(int time) {try {Thread.sleep(time);} catch(InterruptedException e) {e.printStackTrace();}}
 	
@@ -654,5 +657,18 @@ public class Helper {
 		return yearNumber;
 	}
 	
+	public static String generateUserName() {
+		rand = new Random();
+		int num1 = rand.nextInt(99999) + 1000;
+		int num2 = rand.nextInt(99999) + 1000;
+		return "user" + num1 + "me" + num2;
+	}
+	
+	public static String generateEmail() {
+		rand = new Random();
+		int num1 = rand.nextInt(99999) + 1000;
+		int num2 = rand.nextInt(99999) + 1000;
+		return "user." + num1 + ".me." + num2 + "@mail.com";
+	}
 	
 }

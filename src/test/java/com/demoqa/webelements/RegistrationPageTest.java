@@ -37,14 +37,18 @@ public class RegistrationPageTest extends BaseTest {
 		int dobDay = 1;
 		int dobMonth = 1;
 		int dobYear = 2000;
-		String phone = "543-776-1234";
+		String phone = "5437761234";
 		String username = "Me";
 		String email = "meme@gmail.com";
 		String profilePicture = "";
 		String aboutYourself = "Me means Me"; 
-		String pwd = "pwdmeme";	
-	
+		String pwd = "^f_*1a/+#X,m";	
+		String expected = "Thank you for your registration";
+		
 		homePage.navigateToRegistrationPage();
 		registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobDay, dobMonth, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
+
+		
+		
 	}
 }

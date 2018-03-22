@@ -8,6 +8,8 @@
 
 package com.demoqa.webelements;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -33,26 +35,22 @@ public class RegistrationPage extends BasePage {
 	
 	private By hobbyDanceCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(2)");
 	private By hobbyReadingCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(4)");
-	private By hobbyCricketCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(6)");
-
-
-	
-	
-	
+	private By hobbyCricketCheckBox = By.cssSelector("#pie_register > li:nth-child(3) > div > div > input:nth-child(6)");	
 	private By phoneField =  By.id("phone_9");
-	private By usernameField = By.id("useername");
+	private By usernameField = By.id("username");
 	private By emailField = By.id("email_1");
 	private By profilePictureBtn = By.id("profile_pic_10");
 	private By aboutYourselfField = By.id("description");
 	private By pwdField = By.id("password_2");
 	private By confirmPwdField = By.id("confirm_password_password_2");
-	private By submitBtn = By.cssSelector("#pie_register > li:nth-child(14) > div > input[type=\"submit\"]");				
+	private By submitBtn = By.cssSelector("#pie_register > li:nth-child(14) > div > input[type=\"submit\"]");	
+	private By confirmRegistrationMsg = By.cssSelector(".piereg_message");
 			
 	public RegistrationPage(WebDriver driver) {
 		super(driver);
 	}
 	
-	public void registrationUser(
+	public String registrationUser(
 			String fName,
 			String lName,
 			String marStatus,
@@ -69,6 +67,8 @@ public class RegistrationPage extends BasePage {
 			String profilePicture,
 			String aboutYourself,
 			String pwd) {
+		
+		String registrutionStatus = "";
 		
 		// fill out first name
 		we = driver.findElement(fNameField);
@@ -165,31 +165,70 @@ public class RegistrationPage extends BasePage {
 		we = driver.findElement(dobYearDropDownList);
 		we.click();		
 		
+		Helper.waiting(1000);
+		
 		// provide phone number
 		we = driver.findElement(phoneField);
+		we.clear();
 		we.sendKeys(phone);
-		
+		Helper.waiting(1000);
+
 		// provide User Name
 		we = driver.findElement(usernameField);
-		we.sendKeys(userName);
-		
+		we.clear();
+		//we.sendKeys(userName);
+		we.sendKeys(Helper.generateUserName()); // randomly generated
+		Helper.waiting(1000);
+	
 		// provide email
 		we = driver.findElement(emailField);
-		we.sendKeys(email);
-		
+		we.clear();
+		//we.sendKeys(email);
+		we.sendKeys(Helper.generateEmail()); // randomly generated
+		Helper.waiting(1000);
+
 		// provide link for avatar
-		we = driver.findElement(profilePictureBtn);
+		//we = driver.findElement(profilePictureBtn);
+		//we.click();
+		//Helper.waiting(1000);
+
+		// provide info About Yourself
+		we = driver.findElement(aboutYourselfField);
+		we.clear();
+		we.sendKeys(aboutYourself);
+		Helper.waiting(1000);
+		
+		// provide pwd
+		we = driver.findElement(pwdField);
+		we.clear();
+		we.sendKeys(pwd);
+		Helper.waiting(1000);
+		
+		// confirm pwd
+		we = driver.findElement(confirmPwdField);
+		we.clear();
+		we.sendKeys(pwd);
+		Helper.waiting(1000);
+		
+		// submit form
+		we = driver.findElement(submitBtn);
 		we.click();
 		
+		try {
+			if(driver.findElements(confirmRegistrationMsg).size() !=0) {
+				System.out.println("===============debug1===============");
+				we = driver.findElement(confirmRegistrationMsg);
+				registrutionStatus = we.getText();
+			}
+		} catch (NoSuchElementException e) {
+			System.out.println("registaratio fail");
+			System.out.println("===============debug2===============");
+		}
 		
 		
-		
-		
-		Helper.waiting(3000);
+		Helper.waiting(2000);
 
-		
-		
-		
+		return registrutionStatus;
 		
 	}
 		
