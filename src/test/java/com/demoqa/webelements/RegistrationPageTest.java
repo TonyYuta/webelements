@@ -10,6 +10,8 @@ package com.demoqa.webelements;
 
 import org.testng.annotations.Test;
 
+import junit.framework.Assert;
+
 /**
  * RegistrationPageTest //ADDD (description of class)
  * <p>
@@ -46,7 +48,9 @@ public class RegistrationPageTest extends BaseTest {
 		String expected = "Thank you for your registration";
 		
 		homePage.navigateToRegistrationPage();
-		registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobDay, dobMonth, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
+		String actual = 	registrationPage.registrationUser(fName, lName, marStatus, hobbyDance, hobbyReading, hobbyCricket, country, dobDay, dobMonth, dobYear, phone, username, email, profilePicture, aboutYourself, pwd);
+
+		Assert.assertEquals(expected, actual, "registaratio was unsuccessfull");
 
 		
 		
